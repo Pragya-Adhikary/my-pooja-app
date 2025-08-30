@@ -1,0 +1,50 @@
+.popular-poojas {
+  background: #ffe0b2;
+  padding: 40px 20px;
+  text-align: center;
+  color: black;
+    width: 100.6vw;
+}
+
+.popular-poojas h2 {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.scroll-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pooja-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  
+  /* Hide scrollbar for all browsers */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.pooja-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.scroll-btn {
+  background: black;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 5px;
+  transition: background 0.3s;
+}
+
+.scroll-btn:hover {
+  background: grey;
+}

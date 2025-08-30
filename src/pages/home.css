@@ -1,0 +1,138 @@
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff4eb;
+  color: black;
+  width: 100.6vw;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: black;
+}
+.popular-poojas {
+  background: #ffe0b2;
+  padding: 40px 20px;
+  text-align: center;
+  color: black;
+    width: 100.6vw;
+}
+
+.popular-poojas h2 {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.scroll-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pooja-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  
+  /* Hide scrollbar for all browsers */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.pooja-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.scroll-btn {
+  background: black;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 5px;
+  transition: background 0.3s;
+}
+
+.scroll-btn:hover {
+  background: grey;
+}
+.testimonial {
+  background: #ffe0b2;
+  text-align: center;
+  padding: 40px 20px;
+  color: black;
+    width: 100.6vw;
+}
+
+.testimonial h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.testimonial .quote {
+  font-style: italic;
+  color: black;
+  max-width: 600px;
+  margin: 0 auto 10px;
+}
+
+.testimonial .author {
+  font-weight: bold;
+  color: black;
+}
+.why-container {
+  background-color: #fff4eb;
+  padding: 60px 20px;
+  text-align: center;
+    width: 100.6vw;
+}
+
+.why-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.why-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.why-card {
+  background: linear-gradient(to bottom, #fff9f5, #ffeede);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  padding: 30px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.why-icon {
+  font-size: 36px;
+  color: #b22222; /* red color */
+  margin-bottom: 15px;
+}
+
+.why-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+

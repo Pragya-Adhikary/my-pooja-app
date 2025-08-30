@@ -1,0 +1,24 @@
+.testimonial {
+  background: #ffe0b2;
+  text-align: center;
+  padding: 40px 20px;
+  color: black;
+    width: 100.6vw;
+}
+
+.testimonial h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.testimonial .quote {
+  font-style: italic;
+  color: black;
+  max-width: 600px;
+  margin: 0 auto 10px;
+}
+
+.testimonial .author {
+  font-weight: bold;
+  color: black;
+}
