@@ -1,9 +1,10 @@
 .footer {
- background: linear-gradient(#f39842,#edb25a);
+  background: linear-gradient(#f39842,#edb25a);
   color: black;
   padding: 30px 20px;
-  width: 100.5vw;          /* take full viewport width */    /* optional: fill screen height */
+  width: 100%; /* fix horizontal scroll */
   margin: 0;
+  box-sizing: border-box;
 }
 
 .footer-content {
@@ -16,7 +17,7 @@
 .footer-section {
   min-width: 200px;
   margin: 10px 0;
-  text-align: center; /* center text inside each section */
+  text-align: center;
 }
 
 .footer-section h3 {
@@ -28,7 +29,7 @@
   margin: 5px 0;
   display: flex;
   align-items: center;
-  justify-content: center; /* center text and icons horizontally */
+  justify-content: center;
   gap: 8px;
 }
 
@@ -37,21 +38,18 @@
   gap: 15px;
   font-size: 1.5rem;
   cursor: pointer;
-  justify-content: center; /* center icons inside section */
+  justify-content: center;
   align-items: center;
 }
 
 .social-icons a {
   color: white;
   font-size: 10px;
-  margin: 0px;
+  margin: 0;
   text-decoration: none;
   transition: color 0.3s;
 }
-
-.social-icons a:hover {
-  color: black; /* slightly enlarge icon */
-}
+.social-icons a:hover { color: black; }
 
 hr {
   border: 0.5px solid black;

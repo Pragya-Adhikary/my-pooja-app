@@ -1,0 +1,91 @@
+.calendar-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.calendar-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.calendar-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.month {
+  flex: 1 1 45%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+}
+
+.month-title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  width: 14.28%;
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+th {
+  font-weight: 600;
+  color: #333;
+}
+
+td.available {
+  background-color: #4caf50;
+  color: white;
+}
+
+td.booked {
+  background-color: #f44336;
+  color: white;
+  cursor: not-allowed;
+}
+
+td.selected {
+  background-color: #ff5722; /* bright red for selected */
+  color: white;
+  cursor: pointer;
+}
+
+td:hover.available {
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.calendar-info {
+  text-align: center;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .calendar-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .month {
+    flex: 1 1 100%;
+  }
+}

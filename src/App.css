@@ -1,10 +1,18 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Global reset and prevent horizontal scroll */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+html, body, #root {
+  width: 100%;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+/* Logo animations */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -19,12 +27,8 @@
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -33,10 +37,55 @@
   }
 }
 
+/* Cards and general text */
 .card {
   padding: 2em;
 }
-
 .read-the-docs {
   color: #888;
 }
+
+/* =====================
+   Location Loader Styles
+   ===================== */
+.location-loader {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #fff9f5, #ffeede);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.location-loader h2 { font-size: 24px; margin-bottom: 10px; }
+.location-loader p { font-size: 16px; color: #555; }
+.location-loader .error-text { color: red; margin-top: 10px; font-weight: bold; }
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff7a59;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Continue button on map */
+.continue-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff7a59;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.continue-btn:hover { background-color: #ff5722; }

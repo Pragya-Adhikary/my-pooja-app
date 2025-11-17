@@ -1,0 +1,139 @@
+.payment-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.payment-title {
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #333;
+}
+
+.payment-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  background: linear-gradient(to bottom, #fff9f5, #ffeede);
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.payment-left,
+.payment-right {
+  flex: 1 1 280px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.section-heading {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.label {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, #fff9f5, #ffeede);
+  font-size: 14px;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: #ff7a59;
+  box-shadow: 0 0 5px rgba(255, 122, 89, 0.4);
+}
+
+.pay-option {
+  width: 100%;
+  background: linear-gradient(to bottom, #fff9f5, #ffeede);
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pay-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.pay-option img {
+  height: 22px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.pay-now-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff8c42, #ff5e00);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pay-now-btn:hover {
+  background: linear-gradient(90deg, #ff5e00, #ff8c42);
+  transform: scale(1.02);
+}
+
+.secure-text {
+  margin-top: 15px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secure-box {
+  background: linear-gradient(to bottom, #fff9f5, #ffeede);
+  padding: 12px;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 8px;
+  line-height: 1.4;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
