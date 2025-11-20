@@ -1,20 +1,34 @@
-// Ramsharma.tsx
+// Sureshmishra.tsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Sureshmishra.css";
 import PanditCalendar from "./Panditcalendar";
 
 const Sureshmishra: React.FC = () => {
-  const [selectedDate, setSelectedDate] = useState<string | null>(null); // store selected date
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const navigate = useNavigate();
+
+  // DIFFERENT BOOKED DATES FOR SURESH MISHRA
+  const bookedDates = {
+    "2025-02-15": true,
+    "2025-02-20": true,
+    "2025-02-25": true,
+    "2025-03-05": true,
+    "2025-03-12": true,
+  };
 
   const handleSelect = () => {
     if (!selectedDate) {
-      alert("Please select a date first!"); // alert if no date selected
+      alert("Please select a date first!");
       return;
     }
-    // pass date and pandit name to Booking page
-    navigate("/booking", { state: { panditName: "Anil Sharma", date: selectedDate } });
+
+    navigate("/booking", {
+      state: { 
+        panditName: "Suresh Mishra",
+        date: selectedDate 
+      }
+    });
   };
 
   return (
@@ -38,12 +52,15 @@ const Sureshmishra: React.FC = () => {
         </p>
       </div>
 
-      {/* Availability Section */}
+      {/* Availability */}
       <div className="availability-section">
         <h3>Availability</h3>
         <div className="calendar-container">
-          {/* Pass the callback to get selected date */}
-          <PanditCalendar onDateSelect={(date) => setSelectedDate(date)} />
+          <PanditCalendar
+            panditName="Suresh Mishra"
+            bookedDates={bookedDates}       // 📌 DIFFERENT BOOKED DATES FOR THIS PANDIT
+            onDateSelect={(date) => setSelectedDate(date)}
+          />
         </div>
       </div>
 

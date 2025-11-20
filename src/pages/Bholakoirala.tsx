@@ -1,3 +1,4 @@
+// Bholakoirala.tsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Bholakoirala.css";
@@ -7,12 +8,27 @@ const Bholakoirala: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const navigate = useNavigate();
 
+  // 🔴 Booked dates for Bhola Koirala
+  const bookedDates = {
+    "2025-11-03": true,
+    "2025-11-07": true,
+    "2025-11-12": true,
+    "2025-11-15": true,
+    "2025-11-20": true,
+  };
+
   const handleSelect = () => {
     if (!selectedDate) {
       alert("Please select a date first!");
       return;
     }
-    navigate("/booking", { state: { panditName: "Bhola Koirala", date: selectedDate } });
+
+    navigate("/booking", {
+      state: {
+        panditName: "Bhola Koirala",
+        date: selectedDate,
+      },
+    });
   };
 
   return (
@@ -32,7 +48,7 @@ const Bholakoirala: React.FC = () => {
       <div className="about-section">
         <h3>About</h3>
         <p>
-          Pandit Bhola Koirala brings 14 years of experience in conducting Nepali rituals, including Griha Pravesh, Bratabandha, and Annaprashan, ensuring each ceremony is auspicious.
+          Pandit Bhola Koirala brings 14 years of experience in conducting Nepali rituals including Griha Pravesh, Bratabandha, and Annaprashan, ensuring each ceremony is auspicious and smooth.
         </p>
       </div>
 
@@ -42,7 +58,7 @@ const Bholakoirala: React.FC = () => {
         <div className="calendar-container">
           <PanditCalendar
             panditName="Bhola Koirala"
-            bookedDates={{ "2025-11-03": true, "2025-11-07": true }}
+            bookedDates={bookedDates} // 📌 UNIQUE BOOKED DATES
             onDateSelect={(date) => setSelectedDate(date)}
           />
         </div>
@@ -51,7 +67,9 @@ const Bholakoirala: React.FC = () => {
       {/* Buttons */}
       <div className="form-buttons">
         <button className="back">Back</button>
-        <button className="next" onClick={handleSelect}>Next</button>
+        <button className="next" onClick={handleSelect}>
+          Next
+        </button>
       </div>
     </div>
   );

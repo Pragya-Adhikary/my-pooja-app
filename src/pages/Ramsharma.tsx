@@ -5,16 +5,30 @@ import "./Ramsharma.css";
 import PanditCalendar from "./Panditcalendar";
 
 const Ramsharma: React.FC = () => {
-  const [selectedDate, setSelectedDate] = useState<string | null>(null); // store selected date
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const navigate = useNavigate();
+
+  // DIFFERENT BOOKED DATES FOR RAM SHARMA
+  const bookedDates = {
+    "2025-02-08": true,
+    "2025-02-16": true,
+    "2025-02-21": true,
+    "2025-03-04": true,
+    "2025-03-11": true,
+  };
 
   const handleSelect = () => {
     if (!selectedDate) {
-      alert("Please select a date first!"); // alert if no date selected
+      alert("Please select a date first!");
       return;
     }
-    // pass date and pandit name to Booking page
-    navigate("/booking", { state: { panditName: "Anil Sharma", date: selectedDate } });
+
+    navigate("/booking", {
+      state: {
+        panditName: "Ram Sharma",
+        date: selectedDate,
+      },
+    });
   };
 
   return (
@@ -25,7 +39,7 @@ const Ramsharma: React.FC = () => {
         <div className="profile-info">
           <h2>Ram Sharma</h2>
           <p>
-            Experienced Vedic Pandit delivering sacred rituals with devotion and authenticity. | 10 years of experience.
+            Experienced Vedic Pandit delivering sacred rituals with devotion and authenticity | 10 years of experience.
           </p>
         </div>
       </div>
@@ -34,7 +48,7 @@ const Ramsharma: React.FC = () => {
       <div className="about-section">
         <h3>About</h3>
         <p>
-          Pandit Anil Sharma is a skilled priest with over 10 years of experience in performing Hindu rituals and ceremonies.
+          Pandit Ram Sharma is a dedicated priest known for performing traditional Hindu rituals with accuracy and devotion. He has guided families through important ceremonies for over a decade.
         </p>
       </div>
 
@@ -42,15 +56,20 @@ const Ramsharma: React.FC = () => {
       <div className="availability-section">
         <h3>Availability</h3>
         <div className="calendar-container">
-          {/* Pass the callback to get selected date */}
-          <PanditCalendar onDateSelect={(date) => setSelectedDate(date)} />
+          <PanditCalendar
+            panditName="Ram Sharma"
+            bookedDates={bookedDates}      // 📌 UNIQUE BOOKED DATES FOR THIS PANDIT
+            onDateSelect={(date) => setSelectedDate(date)}
+          />
         </div>
       </div>
 
       {/* Buttons */}
       <div className="form-buttons">
         <button className="back">Back</button>
-        <button className="next" onClick={handleSelect}>Next</button>
+        <button className="next" onClick={handleSelect}>
+          Next
+        </button>
       </div>
     </div>
   );
