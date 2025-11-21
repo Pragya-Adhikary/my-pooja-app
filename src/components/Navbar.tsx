@@ -40,8 +40,12 @@ const Navbar: React.FC = () => {
 
       {/* Buttons */}
       <div className="nav-buttons">
+        <Link to="/signup">
         <button className="signup">Sign Up</button>
-        <button className="signin">Sign In</button>
+        </Link>
+        <Link to="/signin">
+          <button className="signin">Sign In</button>
+        </Link>
       </div>
     </nav>
   );

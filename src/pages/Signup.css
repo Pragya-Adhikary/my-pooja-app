@@ -1,0 +1,147 @@
+/* General Layout */
+.signup-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #fff8f0;
+}
+
+/* Main container */
+.signup-container {
+  flex: 1; /* Take remaining vertical space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical center */
+  align-items: center;     /* Horizontal center */
+  text-align: center;
+  padding: 20px;
+}
+
+.signup-container h2 {
+  font-size: 50px;
+  margin-bottom: 60px;
+  color: #f88400;
+}
+
+/* Signup Buttons */
+.signup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Stacks buttons on small screens */
+}
+
+.btn {
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+
+.btn-user {
+  background: #e11c1c;
+  color: #fff;
+}
+
+.btn-user:hover {
+  background: #f62b2b;
+}
+
+.btn-pandit {
+  background: #ff9800;
+  color: #fff;
+}
+
+.btn-pandit:hover {
+  background: #fb8c00;
+}
+.tagline {
+  font-size: 18px;
+  color: #f88400;
+  margin-bottom: 50px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #ffc774;
+  padding: 30px 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Form Inputs */
+.modal-content form input {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #f88400;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #f9830c;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .signup-buttons {
+    flex-direction: column;
+  }
+}

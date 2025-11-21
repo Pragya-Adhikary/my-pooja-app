@@ -6,6 +6,8 @@ import Home from "./pages/home";
 import Poojas from "./pages/Poojas";
 import Pandits from "./pages/Pandits";
 import AboutUs from "./pages/Aboutus";
+import Signup from "./pages/Signup";
+import Signin from "./pages/Signin";
 
 const App: React.FC = () => {
   return (
@@ -20,6 +22,8 @@ const App: React.FC = () => {
           <Route path="/poojas" element={<Poojas />} />
           <Route path="/pandits" element={<Pandits />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<Signin />} />
         </Routes>
       </main>
       <Footer />
