@@ -1,0 +1,127 @@
+.calendar-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+/* Top Navigation Row */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.arrow-btn {
+  border: none;
+  background: #eaeaea;
+  padding: 6px 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.arrow-btn:hover {
+  background: #d5d5d5;
+  transform: scale(1.1);
+}
+
+.center-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Calendar grid for two months */
+.calendar-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.month {
+  flex: 1 1 45%;
+  border: 1px solid #ddd;
+  padding: 14px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+}
+
+.month-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  width: 14.28%;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+th {
+  font-weight: 600;
+  color: #444;
+}
+
+/* Available (Green) */
+td.available {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+/* Booked (Red) */
+td.booked {
+  background-color: #f44336;
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Selected (Orange) */
+td.selected {
+  background-color: #ff5722;
+  color: white;
+  cursor: pointer;
+}
+
+/* Past Dates (Grey & Not Clickable) */
+td.disabled {
+  background-color: #cccccc;
+  color: #666;
+  cursor: not-allowed !important;
+}
+
+td:hover.available {
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+}
+
+.calendar-info {
+  text-align: center;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .calendar-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .month {
+    flex: 1 1 100%;
+  }
+}

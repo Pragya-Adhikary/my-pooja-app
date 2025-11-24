@@ -94,6 +94,7 @@ const AboutSection: React.FC = () => {
           </p>
         </div>
       </section>
+    
     </div>
   );
 };
